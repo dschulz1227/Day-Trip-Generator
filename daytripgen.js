@@ -17,32 +17,38 @@ function run(){
     
     let userInput = prompt("Would you like for us to plan you a vacation?");
         if(userInput === "yes"){
-            console.log("You will go to " + getRandomNumber(destinations))
-            console.log("You will travel there by " + getRandomNumber(methodsOfTranspo))
-            console.log("While you are there, you will spend lots of time " + getRandomNumber(typesOfEntertainment))
+            console.log("You will go to " + getRandomNumber(destinations));
+            console.log("You will travel there by " + getRandomNumber(methodsOfTranspo));
+            console.log("While you are there, you will spend lots of time " + getRandomNumber(typesOfEntertainment));
             console.log("We recommend " + getRandomNumber(restaurant) + " as a great place to eat.");
-            let userSatisfied = prompt("Are you satisfied with these choices?")
+            let userSatisfied = prompt("Are you satisfied with these choices?");
                 if(userSatisfied == "yes"){
-                    console.log( "You are all set for your trip!");
+                    alert("You are all set for your trip!");
                 }else{
-                    let secondChance =prompt("Would you like a new random selection")
+                    let secondChance = prompt("Would you like a new random selection")
                         if (secondChance == "yes"){
                      
                             run();
-                }       
-                        
-                    
-                        }
+                        }       
+                }
 
                 
              } else{
-           let usersChoice = prompt("Let us know where you want to go, hpw you want to get there, and what you want to do while you are there.")
-           let verify = prompt("Are you happy with this vacation?")
+            let usersChoice = prompt("Let us know where you want to go");
+                console.log(usersChoice);
+            let usersChoiceTranspo = prompt("How would you like to get there?");
+                console.log (usersChoiceTranspo);
+            let usersChoiceEntertainment = prompt("What would you like to do while you are there?");
+                console.log (usersChoiceEntertainment);
+            let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
+                console.log (usersChoiceFood);
+
+            let verify = prompt("You chose " + usersChoice,"Are you happy with this vacation?")
                 if(verify == "yes"){
-                    console.log("Here is your itinerary " + usersChoice);
+                    console.log ("Here is your itinerary " + (usersChoice));
                 }else{
-                    let newTrip = prompt("Enter new vacation details")
-                        console.log("Here is your updated itinerary " + newTrip);
+                    let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
+                        console.log("Here is your updated itinerary " + (newTrip));
                     }
                 }
             }
