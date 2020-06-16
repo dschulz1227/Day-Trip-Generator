@@ -3,7 +3,7 @@
 let destinations = ["California" , "Canada" , "Texas" , "Florida"];
 let methodsOfTranspo = ["Plane" , "Car" , "Train" , "Hitchhike"];
 let typesOfEntertainment = ["Seeing a Movie" , "Swimming" , "Birdwatching" , "Crying"];
-
+let restaurant = ["Whataburger" , "Olive Garden" , "The Cheesecake Factory" , "Chik-fil-a"];
 
 function getRandomNumber(array) {
     let myArray = destinations || methodsOfTranspo || typesOfEntertainment;
@@ -24,7 +24,7 @@ function getRandomNumber(array){
 getRandomNumber(destinations);
 getRandomNumber(methodsOfTranspo);
 getRandomNumber(typesOfEntertainment);
-
+getRandomNumber(restaurant);
 
 
 function run(){
@@ -33,6 +33,7 @@ function run(){
             console.log("You will go to " + getRandomNumber(destinations))
             console.log("You will travel there by " + getRandomNumber(methodsOfTranspo))
             console.log("While you are there, you will spend lots of time " + getRandomNumber(typesOfEntertainment))
+            console.log("We recommend " + getRandomNumber(restaurant) + " as a great place to eat.")
         }else{
            let usersChoice = prompt("Let us know where you want to go, hpw you want to get there, and what you want to do while you are there.")
            console.log(usersChoice);
