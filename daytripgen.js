@@ -33,6 +33,9 @@ function run(){
             console.log("You will go to " + getRandomNumber(destinations))
             console.log("You will travel there by " + getRandomNumber(methodsOfTranspo))
             console.log("While you are there, you will spend lots of time " + getRandomNumber(typesOfEntertainment))
+        }else{
+           let usersChoice = prompt("Let us know where you want to go, hpw you want to get there, and what you want to do while you are there.")
+           console.log(usersChoice);
         }
 
     
