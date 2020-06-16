@@ -1,8 +1,8 @@
 "use strict";
 
 let destinations = ["California" , "Canada" , "Texas" , "Florida"];
-let methodsOfTranspo = ["Plane" , "Car" , "Train" , "Hitchhike"];
-let typesOfEntertainment = ["Seeing a Movie" , "Swimming" , "Birdwatching" , "Crying"];
+let methodsOfTranspo = ["Plane" , "Car" , "Train" , "Hitchhiking"];
+let typesOfEntertainment = ["Watching Movies" , "Swimming" , "Birdwatching" , "Crying"];
 let restaurant = ["Whataburger" , "Olive Garden" , "The Cheesecake Factory" , "Chik-fil-a"];
 
 let tripDetails = [getRandomNumber(destinations), getRandomNumber(methodsOfTranspo) , getRandomNumber(typesOfEntertainment),
@@ -44,7 +44,7 @@ function run(){
             let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
                 console.log (usersChoiceFood);
 
-            let verify = prompt("You chose " + usersChoice,"Are you happy with this vacation?")
+            let verify = prompt("You chose " + usersChoice + "Are you happy with this vacation?", "Yes or No");
                 if(verify == "yes"){
                     console.log ("Here is your itinerary " + (usersChoice));
                 }else{
@@ -69,6 +69,6 @@ function displayTripDetails(){
 displayTripDetails();
 
 // Store USERSCHOICES in ARRAY and display as ARRAY with headings
-//Function to display array of randomized trip details(push each detail into array)
+//call result of tripdetails outside of "RUN" function
 //How to choose individual random choices
 
