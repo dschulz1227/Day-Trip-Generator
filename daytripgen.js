@@ -5,7 +5,8 @@ let methodsOfTranspo = ["Plane" , "Car" , "Train" , "Hitchhike"];
 let typesOfEntertainment = ["Seeing a Movie" , "Swimming" , "Birdwatching" , "Crying"];
 let restaurant = ["Whataburger" , "Olive Garden" , "The Cheesecake Factory" , "Chik-fil-a"];
 
-
+let tripDetails = [getRandomNumber(destinations), getRandomNumber(methodsOfTranspo) , getRandomNumber(typesOfEntertainment),
+getRandomNumber(restaurant)];
 
 function getRandomNumber(array){ 
     let randomSelect =  array[Math.floor(Math.random() * array.length)]; 
@@ -14,7 +15,7 @@ function getRandomNumber(array){
 
 
 function run(){
-    
+    let result = tripDetails
     let userInput = prompt("Would you like for us to plan you a vacation?");
         if(userInput === "yes"){
             console.log("You will go to " + getRandomNumber(destinations));
@@ -30,8 +31,8 @@ function run(){
                      
                             run();
                         }       
+                return result;
                 }
-
                 
              } else{
             let usersChoice = prompt("Let us know where you want to go");
@@ -49,6 +50,7 @@ function run(){
                 }else{
                     let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
                         console.log("Here is your updated itinerary " + (newTrip));
+                        
                     }
                 }
             }
@@ -58,8 +60,15 @@ function run(){
 
 run();
 
+//creating function to display completed trip details
 
+function displayTripDetails(){
+    console.log(result)
+}
 
+displayTripDetails();
 
-
+// Store USERSCHOICES in ARRAY and display as ARRAY with headings
+//Function to display array of randomized trip details(push each detail into array)
+//How to choose individual random choices
 
