@@ -1,16 +1,17 @@
 "use strict";
 
-let destination = ["California" , "Canada" , "Texas" , "Florida"];
+let destinations = ["California" , "Canada" , "Texas" , "Florida"];
 let methodsOfTranspo = ["Plane" , "Car" , "Train" , "Hitchhike"];
 let typesOfEntertainment = ["Seeing a Movie" , "Swimming" , "Birdwatching" , "Crying"];
 
 
-function getRandom() {
-    let myArray = destination || methodsOfTranspo || typesOfEntertainment;
-    let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-    return randomItem;
+function getRandomNumber(array) {
+    let myArray = destinations || methodsOfTranspo || typesOfEntertainment;
+    let randomItem = [Math.floor(Math.random()* myArray.length)];
+    let randomSelection = parseFloat(randomItem);
+    return randomSelection;
 }
 
-getRandom(destination);
-getRandom(methodsOfTranspo);
-getRandom(typesOfEntertainment);
+console.log(getRandomNumber(destinations))
+console.log(getRandomNumber(methodsOfTranspo))
+console.log(getRandomNumber(typesOfEntertainment))
