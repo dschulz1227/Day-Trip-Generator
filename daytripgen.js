@@ -61,43 +61,25 @@ function run(){
                             reRoll();
                         }
                 else{
-                    let userTripChoices = chooseTripDetails();
-                    displayTripDetails(userTripChoices);
+                     chooseTripDetails();       
                 }   
                         
-                       
                 return result;
                 }
+        }else{
+            chooseTripDetails();
         }
+    return result;
+    
     }
-        
-        
-                // let usersChoice = prompt("Let us know where you want to go");
-            //     console.log(usersChoice);
-            // let usersChoiceTranspo = prompt("How would you like to get there?");
-            //     console.log (usersChoiceTranspo);
-            // let usersChoiceEntertainment = prompt("What would you like to do while you are there?");
-            //     console.log (usersChoiceEntertainment);
-            // let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
-            //     console.log (usersChoiceFood);
 
-            // let verify = prompt("You chose " + usersChoice + "Are you happy with this vacation?", "Yes or No");
-            //     if(verify == "yes"){
-            //         console.log ("Here is your itinerary " + (usersChoice));
-            //     }else{
-            //         let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
-            //             console.log("Here is your updated itinerary " + (newTrip));
-                        
-            //         }
-            //     }
-            // }
         
-
+        
 
 
 run();
 
-//creating function to display completed trip details
+
 
 function displayTripDetails(){
     console.log(result)
@@ -106,7 +88,7 @@ function displayTripDetails(){
 //displayTripDetails();
 
 
-//let result = usersChoices; 
+ 
 
 function chooseTripDetails(){
          let usersChoices = [];
