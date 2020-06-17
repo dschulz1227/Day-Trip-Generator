@@ -8,10 +8,7 @@ let tripDetails = [getRandomNumber(destinations), getRandomNumber(methodsOfTrans
     getRandomNumber(restaurant)];
 let result = tripDetails
    
-let yes = true;
-let Yes = true;
-let yeah = true;
-let sure = true;
+
 //arrays
 
 
@@ -36,11 +33,11 @@ function reRoll(){
     console.log(getRandomNumber(typesOfEntertainment));
     console.log(getRandomNumber(restaurant));
     let howAboutThese = prompt("Do you like these selections?")
-    if (howAboutThese === true){
+    if (howAboutThese == "yes"){
         console.log("Your trip is planned!")
     }else{
         let userDecide = prompt("Would you like to generate new details?")
-        if(userDecide === true){
+        if(userDecide == "yes"){
         reRoll();
         }
     }
@@ -62,19 +59,19 @@ function displayTripDetails(tripDetails){
 
 function run(){
     let userInput = prompt("Would you like for us to plan you a vacation?");
-        if(userInput === true){
+        if(userInput == "yes"){
             displayTripDetails(tripDetails);
             let userSatisfied = prompt("Are you satisfied with these choices?");
-                if(userSatisfied == true){
+                if(userSatisfied == "yes"){
                     alert("You are all set for your trip!");
-                }else if(userSatisfied != true){
+                }else if(userSatisfied == "no"){
                     let secondChance = prompt("Would you like a new random selection")
-                        if (secondChance === true){
+                        if(secondChance == "yes"){
                             reRoll();
                         }
-                else{
-                     chooseTripDetails();       
-                }   
+                        else{
+                        chooseTripDetails();       
+                        }   
                         
                 return result;
                 }
@@ -107,7 +104,7 @@ function run(){
            usersChoices.push(usersChoiceFood);
 
        let verify = prompt("You chose " + usersChoices + "Are you happy with this vacation?", "Yes or No");
-           if(verify == true){
+           if(verify == "yes"){
                console.log ("Here is your itinerary " + (usersChoices));
            }else{
                let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
