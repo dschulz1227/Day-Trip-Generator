@@ -9,8 +9,6 @@ let tripDetails = [getRandomNumber(destinations), getRandomNumber(methodsOfTrans
 let result = tripDetails
    
 
-//arrays
-
 
 
 
@@ -114,7 +112,7 @@ function run(){
       
        } 
 
-run();
+
 
 
 
