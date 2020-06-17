@@ -14,14 +14,30 @@ function getRandomNumber(array){
 }
 
 
+function reRoll(){
+    console.log(getRandomNumber(destinations));
+    console.log(getRandomNumber(methodsOfTranspo));
+    console.log(getRandomNumber(typesOfEntertainment));
+    console.log(getRandomNumber(restaurant));
+    let howAboutThese = prompt("Do you like these selections?")
+    if (howAboutThese === "yes"){
+        console.log("Your trip is planned!")
+    }else{
+        reRoll();
+    }
+
+    return result;
+}
+
+let result = tripDetails
+
 function run(){
-    let result = tripDetails
     let userInput = prompt("Would you like for us to plan you a vacation?");
         if(userInput === "yes"){
-            console.log("You will go to " + getRandomNumber(destinations));
-            console.log("You will travel there by " + getRandomNumber(methodsOfTranspo));
-            console.log("While you are there, you will spend lots of time " + getRandomNumber(typesOfEntertainment));
-            console.log("We recommend " + getRandomNumber(restaurant) + " as a great place to eat.");
+            console.log("You will go to " + tripDetails[0]);
+            console.log("You will travel there by " + tripDetails[1]);
+            console.log("While you are there, you will spend lots of time " + tripDetails[2]);
+            console.log("We recommend " + tripDetails[3] + " as a great place to eat.");
             let userSatisfied = prompt("Are you satisfied with these choices?");
                 if(userSatisfied == "yes"){
                     alert("You are all set for your trip!");
@@ -29,31 +45,36 @@ function run(){
                     let secondChance = prompt("Would you like a new random selection")
                         if (secondChance == "yes"){
                      
-                            run();
+                            reRoll();
                         }       
                 return result;
                 }
                 
              } else{
-            let usersChoice = prompt("Let us know where you want to go");
-                console.log(usersChoice);
-            let usersChoiceTranspo = prompt("How would you like to get there?");
-                console.log (usersChoiceTranspo);
-            let usersChoiceEntertainment = prompt("What would you like to do while you are there?");
-                console.log (usersChoiceEntertainment);
-            let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
-                console.log (usersChoiceFood);
+                chooseTripDetails();
+            
+             }
 
-            let verify = prompt("You chose " + usersChoice + "Are you happy with this vacation?", "Yes or No");
-                if(verify == "yes"){
-                    console.log ("Here is your itinerary " + (usersChoice));
-                }else{
-                    let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
-                        console.log("Here is your updated itinerary " + (newTrip));
+    }
+                // let usersChoice = prompt("Let us know where you want to go");
+            //     console.log(usersChoice);
+            // let usersChoiceTranspo = prompt("How would you like to get there?");
+            //     console.log (usersChoiceTranspo);
+            // let usersChoiceEntertainment = prompt("What would you like to do while you are there?");
+            //     console.log (usersChoiceEntertainment);
+            // let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
+            //     console.log (usersChoiceFood);
+
+            // let verify = prompt("You chose " + usersChoice + "Are you happy with this vacation?", "Yes or No");
+            //     if(verify == "yes"){
+            //         console.log ("Here is your itinerary " + (usersChoice));
+            //     }else{
+            //         let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
+            //             console.log("Here is your updated itinerary " + (newTrip));
                         
-                    }
-                }
-            }
+            //         }
+            //     }
+            // }
         
 
 
@@ -72,3 +93,22 @@ displayTripDetails();
 //call result of tripdetails outside of "RUN" function
 //How to choose individual random choices
 
+
+function chooseTripDetails(){
+let usersChoice = prompt("Let us know where you want to go");
+                console.log(usersChoice);
+            let usersChoiceTranspo = prompt("How would you like to get there?");
+                console.log (usersChoiceTranspo);
+            let usersChoiceEntertainment = prompt("What would you like to do while you are there?");
+                console.log (usersChoiceEntertainment);
+            let usersChoiceFood = prompt("What restaurant do you want to eat at most while on vacation?");
+                console.log (usersChoiceFood);
+
+            let verify = prompt("You chose " + usersChoice + "Are you happy with this vacation?", "Yes or No");
+                if(verify == "yes"){
+                    console.log ("Here is your itinerary " + (usersChoice));
+                }else{
+                    let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
+                        console.log("Here is your updated itinerary " + (newTrip));
+                }
+            }               
