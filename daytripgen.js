@@ -8,7 +8,10 @@ let tripDetails = [getRandomNumber(destinations), getRandomNumber(methodsOfTrans
     getRandomNumber(restaurant)];
 let result = tripDetails
    
-
+let yes = true;
+let Yes = true;
+let yeah = true;
+let sure = true;
 //arrays
 
 
@@ -33,11 +36,11 @@ function reRoll(){
     console.log(getRandomNumber(typesOfEntertainment));
     console.log(getRandomNumber(restaurant));
     let howAboutThese = prompt("Do you like these selections?")
-    if (howAboutThese === "yes"){
+    if (howAboutThese === true){
         console.log("Your trip is planned!")
     }else{
         let userDecide = prompt("Would you like to generate new details?")
-        if(userDecide === "yes"){
+        if(userDecide === true){
         reRoll();
         }
     }
@@ -59,14 +62,14 @@ function displayTripDetails(tripDetails){
 
 function run(){
     let userInput = prompt("Would you like for us to plan you a vacation?");
-        if(userInput === "yes"){
+        if(userInput === true){
             displayTripDetails(tripDetails);
             let userSatisfied = prompt("Are you satisfied with these choices?");
-                if(userSatisfied == "yes"){
+                if(userSatisfied == true){
                     alert("You are all set for your trip!");
-                }else if(userSatisfied == "no"){
+                }else if(userSatisfied != true){
                     let secondChance = prompt("Would you like a new random selection")
-                        if (secondChance === "yes"){
+                        if (secondChance === true){
                             reRoll();
                         }
                 else{
@@ -104,7 +107,7 @@ function run(){
            usersChoices.push(usersChoiceFood);
 
        let verify = prompt("You chose " + usersChoices + "Are you happy with this vacation?", "Yes or No");
-           if(verify == "yes"){
+           if(verify == true){
                console.log ("Here is your itinerary " + (usersChoices));
            }else{
                let newTrip = prompt("Enter new vacation details", "Where? How? Entertainment? Restaurant?");
